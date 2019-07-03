@@ -1,6 +1,6 @@
 # vuex
 
-> 一个专为 Vue.js 应用程序开发的状态管理模式。主要用于多个页面依赖、改变同一个状态
+> 一个专为 Vue.js 应用程序开发的状态管理模式。主要用于多个组件依赖、改变同一个状态
 
 ## 安装和引入
 ```安装
@@ -13,6 +13,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 ```
 ## 核心介绍 {docsify-ignore}
+
+> 辅助函数的作用：通过 store 实例定义的状态、方法，映射到局部组件，方便快速调用
 
 ### State
 
@@ -27,7 +29,7 @@ const store = new Vuex.Store({
 })
 ```
 * `store.state`获取状态对象
-  * 页面上使用`this.$store.state.name`即可获取`name`的状态
+  * 组件上使用`this.$store.state.name`即可获取`name`的状态
 
 `Vuex` 的状态存储主要的就是响应式，可以将 store 实例直接注入到所有的子组件：
 
