@@ -8,7 +8,8 @@
   <meta name="description" content="Description">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./vue.css">
   <link rel="stylesheet" href="./common.css">
 </head>
 
@@ -20,7 +21,9 @@
       name: '迷之de小孩灬',
       nameLink: '/',
       repo: 'God-Liang/study-record',
-      basePath: '/study-record/',
+      // basePath: '/study-record/',
+      // search: 'auto',
+      basePath: '/',
       // 加载 _sidebar.md
       loadSidebar: true,
       // 加载 summary.md
@@ -32,12 +35,17 @@
       alias: {
         '/.*/sidebar.md': '/sidebar.md'
       },
-      formatUpdated: '{MM}/{DD} {HH}:{mm}'
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      notFoundPage: '404.md',
+      search: {
+        placeholder: {
+          '/': '搜索'
+        }
+      }
     }
   </script>
-  <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
-  <script src="//unpkg.com/docsify@next/lib/docsify.min.js"></script>
-  
+  <script src="./docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 
 </html>
