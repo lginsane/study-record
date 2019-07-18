@@ -52,3 +52,10 @@
   }
   ```
 
+!> 存在问题：html中存在图片则会报错，canvas 画布受污染，_toBlob()_、_toDataURL()_、_getImageData()_等方法无法调用
+
+?> 建议解决办法(_因需要服务端人员配合本人暂未尝试请查看下方`MDN web docs`问题讲解_)：1.`Access-Control-Allow-Origin` 配置为允许跨源访问图像文件 2.设置图片[crossOrigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-crossorigin)属性
+
+[MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image) 
+
+
