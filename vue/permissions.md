@@ -34,8 +34,6 @@ function hasPermission(roles, route) {
  * @param roles
  */
 export function filterAsyncRoutes(routes, roles) {
-  console.log('routes')
-  console.log(routes)
   const res = []
   routes.forEach(route => {
     const tmp = {
@@ -96,19 +94,27 @@ const actions = {
 export function filterRouters(routers) {
   const result = []
   routers.forEach(route => {
-    const tmp = {
-      hidden: route.hidden,
-      path: route.path,
-      component: route.component,
-      redirect: route.redirect ? route.redirect : 'noredirect',
-      name: route.name,
-      alwaysShow: route.alwaysShow,
-      meta: {
-        title: route.title,
-        icon: route.icon,
-        roles: route.roles,
-        noCache: route.noCache,
-        breadcrumb: route.breadcrumb
+    let tmp
+    if (route.pid === 0 || route.children) { // pid为父Id
+      tmp = {
+        path: route.path,
+        component: route.component,
+        redirect: route.redirect ? route.redirect : 'noredirect',
+        name: route.name,
+        alwaysShow: route.alwaysShow,
+        meta: {
+          title: route.title,
+          icon: route.icon
+        }
+      }
+    } else {
+      tmp = {
+        path: route.path,
+        component: route.component,
+        name: route.name,
+        meta: {
+          title: route.title
+        }
       }
     }
     if (route.children) {
@@ -150,3 +156,5 @@ function filterAsyncRouter(asyncRouterMap) { // 遍历后台传来的路由字�
 ```
 
 ?> 最后都是通过router.addRoutes(accessRoutes)将动态路由添加到静态路由中
+
+!> 问题： 1. `_import_production`与`_import_development`中，要使用的`@/ + 地址`，不能使用`@ + /地址`引入文件方法 2. 引入的地址需要到具体地址`views/nested/menu1/menu1-1/index` 而不是`views/nested/menu1/menu1-1`
