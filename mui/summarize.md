@@ -65,7 +65,7 @@ mui("#list").on("tap","li",function(){
 var current = 1; // 当前页数
 mui.init({
   pullRefresh : {
-    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+    container:"#inventorys",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
     down : {
       height:50,//可选,默认50.触发下拉刷新拖动距离,
       auto: true,//可选,默认false.首次加载自动下拉刷新一次
