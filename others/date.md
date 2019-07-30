@@ -76,3 +76,11 @@ function format(fmtStr, date){
 ```获取当天0点时间戳
 new Date(new Date().toLocaleDateString()).getTime()
 ```
+
+```获取当前这一周的时间
+// format为上面的时间格式化函数
+const weeks = []
+for (let i = 0; i < 7; i++) {
+  weeks.push(format('MM.dd', new Date(new Date(timesStamp + 24 * 60 * 60 * 1000 * (i - (currenDay + 6) % 7)).toLocaleDateString().replace(/[年月]/g, '-').replace(/[日上下午]/g, ''))))
+}
+```
