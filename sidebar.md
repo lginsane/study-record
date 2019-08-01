@@ -2,7 +2,10 @@ VUE相关
   * [vue概念](vue/concept)
   * [vuex的介绍和使用](vue/vuex)
   * [路由权限](vue/permissions)
-  
+
+微信相关
+  * [微信授权](wx/wx)
+
 GIT相关
   * [使用方法](git/employ)
   * [常见问题](git/problems)
