@@ -14,8 +14,8 @@ GIT相关
 docsify相关
   * [使用方法](docsify/employ)
 
-MUI相关
-  * [总结](mui/summarize)
+阿里云相关
+  * [对象存储OSS](aliyun/uploadFile)
 
 其他
   * [html转base64图片并保存到本地](others/saveimage)
