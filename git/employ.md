@@ -43,6 +43,7 @@ $ git remote add origin 远程仓库
 `git branch 分支名`创建分支<br/>
 `git branch -d 分支名`删除分支<br/>
 `git merge 分支名`将指定分支合并到当前分支
+`git cherry-pick 版本号`将当前仓库的指定commit合并到当前分支
 * 注：当合并分支出现冲突时，请手动修改冲突
 ```（简写）创建并切换分支
 $ git checkout -b 分支名

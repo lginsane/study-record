@@ -21,3 +21,9 @@ $ git merge 分支名 --allow-unrelated-histories
 # Commands: 
 
 ```
+
+## 跳过eslint检查
+
+```
+git commit --no-verify -m ""
+```

@@ -5,6 +5,7 @@ VUE相关
 
 微信相关
   * [微信授权](wx/wx)
+  * [常见问题](wx/problems)
 
 GIT相关
   * [使用方法](git/employ)
@@ -20,3 +21,4 @@ MUI相关
   * [html转base64图片并保存到本地](others/saveimage)
   * [Date相关](others/date)
   * [数组、对象的方法](others/javascript)
+  * [字蛛-字体压缩器](others/font)
