@@ -1,5 +1,5 @@
 # 字蛛
--> 一个中文字体压缩器
+> 一个中文字体压缩器
 
 [字蛛官网](http://font-spider.org/)
 * 下载 `npm install font-spider -g`
